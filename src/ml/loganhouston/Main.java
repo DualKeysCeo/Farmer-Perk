@@ -5,6 +5,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin implements Listener {
 
+    private String world = "Hello, world!";
+
     @Override
     public void onEnable() {
         System.out.println("Farmer Perk Enabled!");
