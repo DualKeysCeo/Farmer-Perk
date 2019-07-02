@@ -40,6 +40,7 @@ public class Main extends JavaPlugin implements Listener {
         getCommand("peel").setExecutor(new EasterEggs());
         getCommand("bean").setExecutor(new EasterEggs());
         logger.info("Commands initialized");
+        logger.info("^^^ Farmer Perk Startup ^^^");
 
         plugin = this;
     }

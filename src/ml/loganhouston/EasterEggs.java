@@ -1,5 +1,6 @@
 package ml.loganhouston;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -16,19 +17,22 @@ public class EasterEggs implements Listener, CommandExecutor {
 
         Player p = (Player) sender;
 
-        switch (cmd.getName().toLowerCase()) {
-            case "peel":
-                p.setHealth(20);
-                p.setFoodLevel(20);
-                p.setSaturation(20);
-                break;
-            case "bean":
-                ItemStack bean = new ItemStack(Material.COCOA, 1);
-                ItemMeta beanMeta = bean.getItemMeta();
-                beanMeta.setDisplayName("§Beans");
-                bean.setItemMeta(beanMeta);
-                p.getInventory().addItem(bean);
-                break;
+        if (sender instanceof Player) {
+            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6Command Executor Works"));
+        } else {
+            sender.sendMessage("You cant use any Farmer-Perk commands in the terminal!");
+        }
+
+        if (cmd.getName().equalsIgnoreCase("peel")) {
+            p.setHealth(20);
+            p.setFoodLevel(20);
+            p.setSaturation(20);
+        } else if (cmd.getName().equalsIgnoreCase("bean")) {
+            ItemStack bean = new ItemStack(Material.COCOA, 1);
+            ItemMeta beanMeta = bean.getItemMeta();
+            beanMeta.setDisplayName("§Beans");
+            bean.setItemMeta(beanMeta);
+            p.getInventory().addItem(bean);
         }
         return false;
     }

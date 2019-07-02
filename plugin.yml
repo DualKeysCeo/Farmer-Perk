@@ -1,5 +1,5 @@
 name: Farmer-PlayerArr
-version: ${project.version}
+version: 1.0
 main: ml.loganhouston.Main
 api-version: 1.8.8
 authors:
