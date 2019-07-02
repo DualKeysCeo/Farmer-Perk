@@ -1,5 +1,6 @@
 .idea/*
 dist/*
+*.jar
 *.iml
 .classpath
 .project
