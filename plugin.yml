@@ -1,0 +1,25 @@
+name: Farmer-Perk
+version: ${project.version}
+main: ml.loganhouston.Main
+api-version: 1.8.8
+authors:
+  - Logan Houston
+  - Levin202
+prefix: Farmer Perk
+commands:
+  bean:
+    description: Beans
+    usage: There is no help for you, only beans
+  peel:
+    permission: farmer.heal
+    permission-message: You need the farmer.heal permission to use this command
+    description: YOU FOUND THE SECRET COMMAND
+    usage: "Usage: /<command>"
+permissions:
+  farmer.heal:
+    description: Allows use of peel command
+    default: op
+  farmer.*:
+    default: op
+    children:
+      farmer.heal: true
