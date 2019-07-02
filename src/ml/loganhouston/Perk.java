@@ -8,12 +8,14 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import java.util.ArrayList;
 
 public class Perk implements Listener {
-    ArrayList<Player> Perk = new ArrayList<Player>();
+   public ArrayList<Player> Perk = new ArrayList<Player>();
 
     @EventHandler
     public void onPlayerJoinEvent(PlayerJoinEvent e) {
         Player player = e.getPlayer();
-
+        if(player.hasPermission("farmer.perk")) {
+        	Perk.add(player);
+        }
 
 
     }
