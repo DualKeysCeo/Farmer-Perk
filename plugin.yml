@@ -1,4 +1,4 @@
-name: Farmer-Perk
+name: Farmer-PlayerArr
 version: ${project.version}
 main: ml.loganhouston.Main
 api-version: 1.8.8
@@ -8,6 +8,7 @@ authors:
 prefix: Farmer Perk
 commands:
   bean:
+    permission: farmer.bean
     description: Beans
     usage: There is no help for you, only beans
   peel:
@@ -16,10 +17,14 @@ commands:
     description: YOU FOUND THE SECRET COMMAND
     usage: "Usage: /<command>"
 permissions:
+  farmer.bean:
+    description: Allows use of bean command
+    default: op
   farmer.heal:
     description: Allows use of peel command
     default: op
   farmer.*:
     default: op
     children:
+      farmer.bean: true
       farmer.heal: true
