@@ -5,7 +5,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin implements Listener {
 
-    private String world = "Hello, world!";
+    private String bean = "I'm a string bean!";
 
     @Override
     public void onEnable() {
