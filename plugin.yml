@@ -1,5 +1,5 @@
 name: Farmer-Perk
-version: ${project.version}
+version: 0.1
 main: ml.loganhouston.Main
 api-version: 1.8.8
 authors:
@@ -8,6 +8,7 @@ authors:
 prefix: Farmer Perk
 commands:
   bean:
+    permission: farmer.beans
     description: Beans
     usage: There is no help for you, only beans
   peel:
@@ -19,7 +20,11 @@ permissions:
   farmer.heal:
     description: Allows use of peel command
     default: op
+  farmer.beans:
+    description: Allows use of beans command
+    default: op
   farmer.*:
     default: op
     children:
       farmer.heal: true
+      farmer.beans: true

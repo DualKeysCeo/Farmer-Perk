@@ -10,12 +10,12 @@ public class Main extends JavaPlugin implements Listener {
     public static Main plugin;
 
 
-
     @Override
     public void onEnable() {
         getServer().getPluginManager().registerEvents(this, this);
-        Bukkit.broadcastMessage("Farmer Perk starting!");
-        Bukkit.broadcastMessage("88                                             \n" +
+        Bukkit.getLogger().info("[Farmer Perk] Commencing bean.\n"+
+                "88" +
+                "                                             \n" +
                 "88                                             \n" +
                 "88                                             \n" +
                 "88,dPPYba,   ,adPPYba, ,adPPYYba, 8b,dPPYba,   \n" +
@@ -23,12 +23,13 @@ public class Main extends JavaPlugin implements Listener {
                 "88       d8 8PP\"\"\"\"\"\"\" ,adPPPPP88 88       88  \n" +
                 "88b,   ,a8\" \"8b,   ,aa 88,    ,88 88       88  \n" +
                 "8Y\"Ybbd8\"'   `\"Ybbd8\"' `\"8bbdP\"Y8 88       88\n");
+        Bukkit.broadcastMessage("Farmer Perk starting!");
         plugin = this;
     }
 
     @Override
     public void onDisable() {
-        Bukkit.broadcastMessage("Shutting down...");
+        Bukkit.getLogger().warning("[Farmer Perk] Shutting down...");
     }
 
     public static Main getPlugin() {
