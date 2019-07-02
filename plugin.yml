@@ -1,6 +1,6 @@
 name: Farmer-Perk
 version: ${project.version}
-main: Main
+main: ml.loganhouston.Main
 api-version: 1.8.8
 authors:
   - Logan Houston
