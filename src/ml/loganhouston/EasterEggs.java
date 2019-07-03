@@ -17,10 +17,9 @@ public class EasterEggs implements Listener, CommandExecutor {
 
         Player p = (Player) sender;
 
-        if (sender instanceof Player) {
-            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6Command Executor Works"));
-        } else {
+        if (!(sender instanceof Player)) {
             sender.sendMessage("You cant use any Farmer-Perk commands in the terminal!");
+            return false;
         }
 
         if (cmd.getName().equalsIgnoreCase("peel")) {
@@ -28,9 +27,10 @@ public class EasterEggs implements Listener, CommandExecutor {
             p.setFoodLevel(20);
             p.setSaturation(20);
         } else if (cmd.getName().equalsIgnoreCase("bean")) {
-            ItemStack bean = new ItemStack(Material.COCOA, 1);
+            p.sendMessage(ChatColor.BLUE + "Have a bean");
+            ItemStack bean = new ItemStack(351, 1, (short)3);
             ItemMeta beanMeta = bean.getItemMeta();
-            beanMeta.setDisplayName("§Beans");
+            beanMeta.setDisplayName("§rBeans");
             bean.setItemMeta(beanMeta);
             p.getInventory().addItem(bean);
         }

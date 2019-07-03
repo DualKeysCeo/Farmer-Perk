@@ -30,7 +30,7 @@ public class Main extends JavaPlugin implements Listener {
 
         logger.info("Initializing Classes");
         registerEvents(this,
-                new CropHarvesting(),
+                new CropHarvesting(this),
                 new EasterEggs(),
                 new PlayerArr()
         );

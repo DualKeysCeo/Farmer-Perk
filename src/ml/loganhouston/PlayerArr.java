@@ -13,7 +13,7 @@ public class PlayerArr implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e) {
         Player player = e.getPlayer();
-        if(player.hasPermission("farmer.playerArr")) {
+        if(player.hasPermission("farmer.perk")) {
             playerList.add(player);
         }
     }
