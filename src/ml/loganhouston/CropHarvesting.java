@@ -41,8 +41,9 @@ public class CropHarvesting implements Listener {
                     if (block.getType() == crops[i]) player.getInventory().addItem(drops[i]);
                     if (block.getType() == crops[0]) player.getInventory().addItem(new ItemStack(Material.SEEDS, (int)Math.round(Math.random()+1)));
                 }
-            } else if (cropBroken.toString() == "SUGAR_CANE_BLOCK(0)") player.getInventory().addItem(sugarcane);
-            else {
+            } else if (cropBroken.toString() == "SUGAR_CANE_BLOCK(0)") {
+                player.getInventory().addItem(sugarcane);
+            }else {
                 e.setCancelled(true);
             }
         }
