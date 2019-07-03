@@ -43,7 +43,7 @@ public class CropHarvesting implements Listener {
                 }
             } else if (cropBroken.toString() == "SUGAR_CANE_BLOCK(0)") {
                 player.getInventory().addItem(sugarcane);
-            }else {
+            } else {
                 e.setCancelled(true);
             }
         }
